@@ -4,7 +4,7 @@
   <title><![CDATA[Nice R Code]]></title>
   <link href="http://nicercode.github.com/atom.xml" rel="self"/>
   <link href="http://nicercode.github.com/"/>
-  <updated>2013-02-25T11:29:39+11:00</updated>
+  <updated>2013-02-25T11:41:17+11:00</updated>
   <id>http://nicercode.github.com/</id>
   <author>
     <name><![CDATA[Rich FitzJohn & Daniel Falster]]></name>
@@ -18,13 +18,13 @@
     <link href="http://nicercode.github.com/blog/2013-02-12-test-post/"/>
     <updated>2013-02-12T17:57:00+11:00</updated>
     <id>http://nicercode.github.com/blog/test-post</id>
-    <content type="html"><![CDATA[<p>On this blog, I&#8217;m hoping to record bits of information about using R
-for ecology and evolution.  Communicating tips person-to-person is too
-inefficient, and recently helping out at a
-<a href="http://software-carpentry.org">software carpentry</a> boot camp has got me
-interested in broadcasting ideas more widely.</p>
+    <content type="html"><![CDATA[<p>On this blog, we (Daniel Falster and I) are hoping to record bits of
+information about using R for ecology and evolution.  Communicating
+tips person-to-person is too inefficient, and recently helping out at
+a <a href="http://software-carpentry.org">software carpentry</a> boot camp has
+got me interested in broadcasting ideas more widely.</p>
 
-<p>This is a test.</p>
+<p>Test code:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -37,7 +37,7 @@ interested in broadcasting ideas more widely.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>More test</p>
+<p>More test for checking the layout.</p>
 ]]></content>
   </entry>
   
