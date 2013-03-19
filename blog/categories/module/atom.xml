@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Nice R Code]]></title>
-  <link href="http://nicercode.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: module | Nice R Code]]></title>
+  <link href="http://nicercode.github.com/blog/categories/module/atom.xml" rel="self"/>
   <link href="http://nicercode.github.com/"/>
   <updated>2013-03-20T09:17:29+11:00</updated>
   <id>http://nicercode.github.com/</id>
@@ -69,33 +69,6 @@ discuss their problems with us.  They then work on their problem over
 the next fortnight and in the next session we will discuss what the
 issues were, the possibilities for overcoming them, and the eventual
 solutions.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[R in ecology and evolution]]></title>
-    <link href="http://nicercode.github.com/blog/2013-02-12-test-post/"/>
-    <updated>2013-02-12T17:57:00+11:00</updated>
-    <id>http://nicercode.github.com/blog/test-post</id>
-    <content type="html"><![CDATA[<p>On this blog, we (Daniel Falster and I) are hoping to record bits of
-information about using R for ecology and evolution.  Communicating
-tips person-to-person is too inefficient, and recently helping out at
-a <a href="http://software-carpentry.org">software carpentry</a> boot camp has
-got me interested in broadcasting ideas more widely.</p>
-
-<p>Test code:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class="r"><span class="line">f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span>
-</span><span class="line">  sin<span class="p">(</span>x<span class="p">)</span>
-</span><span class="line"><span class="kr">for</span> <span class="p">(</span> i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span> <span class="p">)</span>
-</span><span class="line">  print<span class="p">(</span>i<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>More test for checking the layout.</p>
 ]]></content>
   </entry>
   

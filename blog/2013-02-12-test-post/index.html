@@ -31,6 +31,22 @@ tips person- &hellip;">
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
 
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
   
 
 </head>
@@ -100,16 +116,15 @@ got me interested in broadcasting ideas more widely.</p>
 
 <p>Test code:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span>
-</span><span class='line'>  sin<span class="p">(</span>x<span class="p">)</span>
-</span><span class='line'><span class="kr">for</span> <span class="p">(</span> i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span> <span class="p">)</span>
-</span><span class='line'>  print<span class="p">(</span>i<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class="r"><span class="line">f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span>
+</span><span class="line">  sin<span class="p">(</span>x<span class="p">)</span>
+</span><span class="line"><span class="kr">for</span> <span class="p">(</span> i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span> <span class="p">)</span>
+</span><span class="line">  print<span class="p">(</span>i<span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>More test for checking the layout.</p>
 </div>
@@ -152,7 +167,7 @@ got me interested in broadcasting ideas more widely.</p>
     <p class="meta">
       
       
-        <a class="basic-alignment right" href="/blog/2013-03-07-trial/" title="Next Post: Trial">Trial &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013-03-08-nice-r-code-2013-plans/" title="Next Post: Plans for 'Nice R code module', Macquarie University 2013">Plans for 'Nice R code module', Macquarie University 2013 &raquo;</a>
       
     </p>
   </footer>
@@ -167,7 +182,7 @@ got me interested in broadcasting ideas more widely.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013-03-07-trial/">Trial</a>
+        <a href="/blog/2013-03-08-nice-r-code-2013-plans/">Plans for 'Nice R code module', Macquarie University 2013</a>
       </li>
     
       <li class="post">

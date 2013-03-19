@@ -5,17 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Trial - Nice R Code</title>
+  <title>Introduction to R - Nice R Code</title>
   <meta name="author" content="Rich FitzJohn & Daniel Falster">
 
   
-  <meta name="description" content="Code in different languages 1
-2
-f &lt;- function(x) print(x) 1
-2
-3
-4
-class Foo { Foo(); }; ">
+  <meta name="description" content="Introduction to R 18 March 2013 These are the help pages for the
+Genes to Geosciences
+introduction to R
+module. Topics we will cover today: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +21,7 @@ class Foo { Foo(); }; ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nicercode.github.com/blog/2013-03-07-trial/">
+  <link rel="canonical" href="http://nicercode.github.com/intro/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -34,6 +31,22 @@ class Foo { Foo(); }; ">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
   
 
@@ -69,15 +82,11 @@ class Foo { Foo(); }; ">
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Trial</h1>
-    
-    
-      <p class="meta">
-        
+    <h1 class="entry-title">Introduction to R</h1>
+    <p class="meta">
 
 
 
@@ -89,80 +98,43 @@ class Foo { Foo(); }; ">
   
 
 
-<time datetime="2013-03-07T15:40:00+11:00" pubdate data-updated="true">07 March 2013</time>
-        
-      </p>
-    
+<time datetime="2013-03-18T10:25:00+11:00" pubdate data-updated="true">18 March 2013</time></p>
   </header>
-
-
-<div class="entry-content"><p>Code in different languages</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='r'><span class='line'>f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span>
-</span><span class='line'>  print<span class="p">(</span>x<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
-</span><span class='line'>  <span class="n">Foo</span><span class="p">();</span>
-</span><span class='line'>  
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
+  <p>These are the help pages for the
+<a href="http://www.gg.mq.edu.au">Genes to Geosciences</a>
+<a href="http://www.gg.mq.edu.au/rep/#GG_R_modules">introduction to R</a>
+module.</p>
 
-<span class="byline author vcard">Posted by <span class="fn">Rich FitzJohn & Daniel Falster</span></span>
+<p>Topics we will cover today:</p>
 
-      
+<ol>
+  <li><a href="preliminaries.html">Preliminaries</a>: Getting your environment set
+up.</li>
+  <li>Getting started: Starting R, using it as
+a calculator, and variables.</li>
+  <li>Loading data: Reading in data, viewing, and
+subsetting.</li>
+  <li>Writing functions: Avoiding errors and
+better describing your intent.</li>
+  <li>Data types: A digression on data types</li>
+  <li>Repeating things: Introduction to ways of
+automating repetitive tasks.</li>
+  <li>Missing data: Another digression on missing
+data.</li>
+</ol>
 
+<p>I’ve collected a few <a href="resources.html">resources</a> to help you continue
+learning.</p>
 
+<!--
+I've also made a non-exhaustive list of [bad habits](bad-habits.html)
+that you should avoid and tips you should follow.
 
-
-
-
-
+We can't possibly cover everything, [for example](not-covered.html).
+-->
 
   
-
-
-<time datetime="2013-03-07T15:40:00+11:00" pubdate data-updated="true">07 March 2013</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://nicercode.github.com/blog/2013-03-07-trial/" data-via="" data-counturl="http://nicercode.github.com/blog/2013-03-07-trial/" >Tweet</a>
-  
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013-02-12-test-post/" title="Previous Post: R in ecology and evolution">&laquo; R in ecology and evolution</a>
-      
-      
-    </p>
-  </footer>
 </article>
 
 </div>
@@ -174,7 +146,7 @@ class Foo { Foo(); }; ">
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013-03-07-trial/">Trial</a>
+        <a href="/blog/2013-03-08-nice-r-code-2013-plans/">Plans for 'Nice R code module', Macquarie University 2013</a>
       </li>
     
       <li class="post">
