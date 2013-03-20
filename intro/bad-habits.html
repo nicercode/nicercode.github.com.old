@@ -178,21 +178,24 @@ entropy.</p>
 </span><span class="line"><span class="p">}</span>
 </span><span class="line">variance<span class="p">(</span>data<span class="o">$</span>Height<span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>vs
-&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;figcaption&gt;<span></span>&lt;/figcaption&gt;&lt;div class=&#8221;highlight&#8221;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#8221;gutter&#8221;&gt;&lt;pre class=&#8221;line-numbers&#8221;&gt;<span class="line-number">1</span>
+
+<p>vs</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
 <span class="line-number">5</span>
 <span class="line-number">6</span>
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;<code class="r"><span class="line">variance <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
+</pre></td><td class="code"><pre><code class="r"><span class="line">variance <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
 </span><span class="line">  n <span class="o">&lt;-</span> length<span class="p">(</span>x<span class="p">)</span>
 </span><span class="line">  m <span class="o">&lt;-</span> mean<span class="p">(</span>x<span class="p">)</span>
 </span><span class="line">  <span class="p">(</span><span class="m">1</span> <span class="o">/</span> <span class="p">(</span>n<span class="m">-1</span><span class="p">))</span> <span class="o">*</span> sum<span class="p">((</span>x <span class="o">-</span> m<span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
 </span><span class="line"><span class="p">}</span>
 </span><span class="line">variance<span class="p">(</span>data<span class="o">$</span>Height<span class="p">)</span>
-</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;
-It is much more obvious that the body of the variance function is
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>It is much more obvious that the body of the variance function is
 three lines long in the second version than the first.  Skimming the
 code, you will probably interpret the first version has only having a
 one line body and miss most of the function.</p>
