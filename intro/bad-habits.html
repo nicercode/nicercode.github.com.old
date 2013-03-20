@@ -137,7 +137,8 @@ ecological data).  Try to have each function do just one thing.</p>
   <li>
     <p>Don’t write functions that depend on global variables, as this
 makes it hard to use those functions elsewhere (which was the point
-of writing them!).  All data should be given as a</p>
+of writing them!).  All data should be given as arguments to the
+function.</p>
   </li>
   <li>
     <p>Do document your work.  You probably cannot have enough describing
@@ -174,7 +175,7 @@ entropy.</p>
 </span><span class="line">  n <span class="o">&lt;-</span> length<span class="p">(</span>x<span class="p">)</span>
 </span><span class="line">m <span class="o">&lt;-</span> mean<span class="p">(</span>x<span class="p">)</span>
 </span><span class="line"><span class="p">(</span><span class="m">1</span> <span class="o">/</span> <span class="p">(</span>n<span class="m">-1</span><span class="p">))</span> <span class="o">*</span> sum<span class="p">((</span>x <span class="o">-</span> m<span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
-</span><span class="line">  <span class="p">}</span>
+</span><span class="line"><span class="p">}</span>
 </span><span class="line">variance<span class="p">(</span>data<span class="o">$</span>Height<span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>vs
@@ -190,7 +191,11 @@ entropy.</p>
 </span><span class="line">  <span class="p">(</span><span class="m">1</span> <span class="o">/</span> <span class="p">(</span>n<span class="m">-1</span><span class="p">))</span> <span class="o">*</span> sum<span class="p">((</span>x <span class="o">-</span> m<span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
 </span><span class="line"><span class="p">}</span>
 </span><span class="line">variance<span class="p">(</span>data<span class="o">$</span>Height<span class="p">)</span>
-</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;</p>
+</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;
+It is much more obvious that the body of the variance function is
+three lines long in the second version than the first.  Skimming the
+code, you will probably interpret the first version has only having a
+one line body and miss most of the function.</p>
 
 <p>A good rule of thumb is to
 <a href="http://c2.com/cgi/wiki?CodeForTheMaintainer">code for the person who will mantain your code</a>.
