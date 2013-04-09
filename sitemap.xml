@@ -1,20 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://nicercode.github.com/blog/2013-02-12-test-post/</loc>
-        <lastmod>2013-02-25T11:34:46+11:00</lastmod>
+        <loc>http://nicercode.github.com/blog/2013-02-12-r-ecology-evolution/</loc>
+        <lastmod>2013-04-09T13:06:38+10:00</lastmod>
     </url>
     <url>
         <loc>http://nicercode.github.com/blog/2013-03-08-nice-r-code-2013-plans/</loc>
-        <lastmod>2013-03-16T11:57:56+11:00</lastmod>
+        <lastmod>2013-04-09T13:46:48+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nicercode.github.com/blog/2013-04-05-projects/</loc>
+        <lastmod>2013-04-09T13:45:48+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nicercode.github.com/blog/2013-04-05-why-nice-code/</loc>
+        <lastmod>2013-04-09T13:46:06+10:00</lastmod>
     </url>
     <url>
         <loc>http://nicercode.github.com/blog/archives/</loc>
-        <lastmod>2013-03-16T11:57:56+11:00</lastmod>
+        <lastmod>2013-04-09T13:46:48+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nicercode.github.com/git/</loc>
+        <lastmod>2013-04-09T08:54:45+10:00</lastmod>
     </url>
     <url>
         <loc>http://nicercode.github.com/</loc>
-        <lastmod>2013-03-16T11:57:56+11:00</lastmod>
+        <lastmod>2013-04-09T13:46:48+10:00</lastmod>
     </url>
     <url>
         <loc>http://nicercode.github.com/intro/bad-habits.html</loc>

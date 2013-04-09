@@ -4,7 +4,7 @@
   <title><![CDATA[Nice R Code]]></title>
   <link href="http://nicercode.github.com/atom.xml" rel="self"/>
   <link href="http://nicercode.github.com/"/>
-  <updated>2013-04-03T14:50:55+11:00</updated>
+  <updated>2013-04-09T13:47:14+10:00</updated>
   <id>http://nicercode.github.com/</id>
   <author>
     <name><![CDATA[Rich FitzJohn & Daniel Falster]]></name>
@@ -12,6 +12,407 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why nice code]]></title>
+    <link href="http://nicercode.github.com/blog/2013-04-05-why-nice-code/"/>
+    <updated>2013-04-05T14:46:00+11:00</updated>
+    <id>http://nicercode.github.com/blog/why-nice-code</id>
+    <content type="html"><![CDATA[<!-- 
+Why are students here
+Goals: performance, learning, affective, social
+Value: attainment, intrinsic, instrumental 
+
+Instrumental - allows you to accomplish other important goals (extrinsic 
+rewards), i.e. learn about world, write papers, impress others
+Intrinsic - value nice code for itself (craftsmanship)
+Attainment -  satisfaction in getting something to work
+-->
+
+<p>Writing code is fast becoming a key - if not the most important - skill for 
+doing research in the 21st century. As scientists, we live in extraordinary 
+times. The amount of data (information) available to us is increasingly 
+exponentially, allowing for rapid advances in our understanding of the world 
+around us. The amount of information contained in a standard scientific paper 
+also seems to be on the rise. Researchers therefore need to be able to handle 
+ever larger amounts of data to ask novel questions and get papers published.
+Yet, the standard tools used by many biologists -  point and click programs for 
+manipulating data, doing stats and making plots - do not allow us to scale-up 
+our analyses to macth data availability, at least not without many, many more 
+‘clicks’. The solution is to write scripts in programs like 
+<a href="www.r-project.org/">R</a>, <a href="http://www.python.org/">python</a> or 
+<a href="http://www.mathworks.com.au/products/matlab/">matlab</a>. Scripting allows you to 
+automate analyses, and therefore <a href="http://i.imgur.com/SbzNW8s.png">scale-up without a big increase in 
+effort</a>.  </p>
+
+<!-- more -->
+
+<p>Writing code also offers other benefits beneficial to research. When your 
+analyses are documented in a script, it is easier to pick up a project and 
+start working on it again. You have a record of what you did and why. Chunks 
+of code can also be reused in new projects, saving vast amount of time. Writing 
+code also allows for effective collaboration with people from all over the 
+world. For all these reasons, many researchers are now learning how to write 
+code.</p>
+
+<p>Yet, most researchers have no or limited formal training in computer science, 
+and thus struggle to write nice code. Most of us are self-taught, having used a 
+mix of books, advice from other amateur coders, internet posts, and lots of 
+trial and error. Soon after have we written our first R script, our hard drives 
+explode with large bodies of barely readable code that we only half understand, 
+that also happens to be full of bugs and is generally difficult to use. Not 
+surprisingly, many researchers find writing code to be a relatively painful 
+process, involving lots of trial and error and, inevitably, frustration. </p>
+
+<p>If this sounds familiar to you, don’t worry, you are not alone. There are many 
+<a href="http://nicercode.github.com/intro/resources.html">great R resources</a> available, but most show you how 
+to do some fancy trick, e.g. run some complicated statistical test or make a 
+fancy plot. Few people - outside of computer science departments - spend time 
+discussing the qualities of nice code and teaching you good coding habits. 
+Certainly no one is teaching you these skills in your standard biology research 
+department.</p>
+
+<p>Seeing how many researchers were struggling with their code, we 
+(<a href="http://www.zoology.ubc.ca/~fitzjohn/">Rich FitzJohn</a> and 
+<a href="http://www.falsters.net/daniel">Daniel Falster</a>) have teamed up to bring you 
+the <a href="http://nicercode.github.io/">nice R code</a> course and blog. We are 
+targeting researchers who are already using R and want to take their coding to 
+the next level. Our goal is to help you write nicer code. By ‘nicer’ we mean 
+code that is easy to read, easy to write, runs fast, gives reliable results, is 
+easy to reuse in new projects, and is easy to share with collaborators. We will 
+be focussing on elements of workflow, good coding habits and some tricks, that 
+will help transform your code from ugly to nice.</p>
+
+<p>The inspiration for nice R code came in part from attending a boot camp run by 
+Greg Wilson from the <a href="http://software-carpentry.org/">software carpentry team</a>. 
+These boot camps aim to help researchers be more productive by teaching them 
+basic computing skills. Unlike other software courses we had attended, the 
+focus in the boot camps was on good programming habits and design. As 
+biologists, we saw a need for more material focussed on R, the language that 
+has come to dominate biological research. Hence the nice R code blog.</p>
+
+<h2 id="key-elements-of-nice-r-code">Key elements of nice R code</h2>
+<p>We will now briefly consider some of the key principles of writing nice code. </p>
+
+<h3 id="nice-code-is-easy-to-read">Nice code is easy to read</h3>
+
+<blockquote>
+  <p>Programs should be written for people to read, and only incidentally for 
+machines to execute.
+– from “Structure and Interpretation of Computer Programs” by Abelson and 
+Sussman</p>
+</blockquote>
+
+<p>This is by far the most important guiding principle for writing nicer code. 
+<em>Anyone (especially you) should be able to pick up any of your projects, 
+understand what the code does and how to run it</em>. Most code written for 
+research purposes is not easy to read.</p>
+
+<p>In our opinion, there are no fixed rules for what nice code should look like, 
+there is just a single test - is it easy to read? To check how nice your code
+is, pass it to a collaborator, or put it aside and come back after a year. Do 
+they (your collaborator or future self) understand it?</p>
+
+<p>While there are no fixed rules for writing nice code, we can provide some 
+guidelines. Adopting them should make your code substantially more readable. 
+We will explore each of these in more detail, but here is a brief overview:</p>
+
+<ul>
+  <li><strong>Use a sensible directory structure for organising project related 
+materials</strong>, for ease of use</li>
+  <li><strong>apply a consistent style</strong>, such as that described in  the google R style 
+guide, to increase readability</li>
+  <li><strong>is self documenting</strong></li>
+  <li><strong>abstract your code into many small functions</strong> with helpful descriptive 
+names. </li>
+  <li><strong>use comments, design features, and meaningful variable or function names</strong> 
+to capture the intent of your code, i.e. describe what it is <em>meant</em> to do</li>
+  <li><strong>use version control</strong>: there are many reasons for using version control,
+but one that it stores seamlessly archives older versions of your code. This 
+permits you to safely delete old files, and therefore helps reduce clutter. </li>
+</ul>
+
+<h3 id="nice-code-is-reliable-ie-bug-free">Nice code is reliable, i.e. bug free</h3>
+
+<blockquote>
+  <p>The computer does exactly what you tell it to.</p>
+</blockquote>
+
+<p>How certain are you that your code does what you think it does? </p>
+
+<p>The main elements that make code more readable will also
+Here are some tips fo
+- don’t repeat yourself, avoiding repetition makes code more reliable
+- testing scripts
+- global vars
+- version control</p>
+
+<h3 id="nice-code-runs-quickly-and-is-therefore-a-pleasure-to-use">Nice code runs quickly and is therefore a pleasure to use</h3>
+
+<h2 id="the-benefits-of-writing-nicer-code">The benefits of writing nicer code</h2>
+
+<p>There is a common perception among scientists we have talked with that provided 
+the code “runs”, it doesn’t need to be nice. Researchers are primarily interested in writing scientific papers, so spend 
+most of their time getting their code to run, and almost no time focussing on the 
+quality of the code itself. Along the way we might take a number of shortcuts, 
+telling ourselves that it doesn’t matter, as 
+long as it runs, right? Well if you need motivation, consider this  </p>
+
+<blockquote>
+  <p>Always code as if the person who will maintain your code is a maniac serial 
+killer that knows where you live</p>
+</blockquote>
+
+<p>This might sound extreme, until you realise that the maniac serial killer is 
+<strong>you</strong>, and they definitely know where you live. At some point, you will 
+return to nearly every piece of code you wrote and need to understand it 
+afresh. If it is ugly code, you will spend a lot of time going over it to 
+understand what you did, possibly a week, month, year or decade ago. Although 
+you are unlikely get so frustrated as to seek bloody revenge on your former 
+self, you might come close. The single biggest reason you should write nice 
+code is so that your future self can understand it.</p>
+
+<p>As a by product, we also note that code that is easy to read is also easy to 
+reuse in new projects and share with colleagues, including as online 
+supplementary material. Increasingly, journals are requiring code be submitted 
+as part of the review process and often published online. Alas, much of the 
+current crop of code is difficult to read. At best, having ugly code may reduce 
+the impact of your paper, at worst, your paper might get rejected because the 
+reviewer can’t understand your code.</p>
+
+<p>Why: </p>
+
+<ul>
+  <li><strong>Better science</strong>: more data, less bugs.</li>
+  <li><strong>More fun</strong>: spend less time wrestling with R, enjoyment of scientific 
+process. nice code is more fun</li>
+  <li>
+    <p><strong>Bigger datasets</strong>: allows you to scale up. Repetition is avoidable, which 
+it isn’t in field or lab- ever decreasing cost of more data, compared to linear 
+cost with bad code/ excel. </p>
+  </li>
+  <li><strong>Become more efficient</strong>:  reusable, sharable. shortcut now is mortgage on 
+your future time</li>
+  <li><strong>Future employment</strong>: Impact. <strong>you should consider anything 
+you write (open or closed) to be a potential advert to a future employer</strong>. 
+[Scientists and engineers with an analytical bent are sought-after in 
+natural-hazard risk assessment” in natural-hazard risk 
+assessment](http://www.nature.com/naturejobs/science/articles/10.1038/nj7440-271</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Designing projects]]></title>
+    <link href="http://nicercode.github.com/blog/2013-04-05-projects/"/>
+    <updated>2013-04-05T14:34:00+11:00</updated>
+    <id>http://nicercode.github.com/blog/projects</id>
+    <content type="html"><![CDATA[<p>The scientific process is naturally incremental, and many projects
+start life as random notes, some code, then a manuscript, and
+eventually everything is a bit mixed together.</p>
+
+<!-- more -->
+
+<h1 id="directory-layout">Directory layout</h1>
+
+<p>A good project layout helps ensure the</p>
+
+<ul>
+  <li>Integrity of data</li>
+  <li>Portability of the project</li>
+  <li>Easier to pick the project back up after a break</li>
+</ul>
+
+<p>There is no one way to lay a project out.  Daniel and I both have
+different approaches for different projects, reflecting the history of
+the project, who else is collaborating on that project.</p>
+
+<p>Here are a couple of different ideas for laying a project out.  This
+is the basic structure that I tend to use:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">proj/
+</span><span class="line">├── R/
+</span><span class="line">├── data/
+</span><span class="line">├── doc/
+</span><span class="line">├── figs/
+</span><span class="line">└── output/</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>
+    <p>The <code>R</code> directory contains various files with function definitions
+(but <em>only</em> function definitions - no code that actually runs).</p>
+  </li>
+  <li>
+    <p>The <code>data</code> directory contains data used in the analysis.  This is
+treated as <em>read only</em>; in paricular the R files are never allowed
+to write to the files in here.  Depending on the project, these
+might be csv files, a database, and the directory itself may have
+subdirectories.</p>
+  </li>
+  <li>
+    <p>The <code>doc</code> directory contains the paper.  I work in LaTeX which is
+nice because it can pick up figures directly made by R.  Markdown
+can do the same and is starting to get traction among biologists.
+With Word you’ll have to paste them in yourself as the figures
+update.</p>
+  </li>
+  <li>
+    <p>The <code>figs</code> directory contains the figures.  This directory <em>only
+contains generated files</em>; that is, I should always be able to
+delete the contents and regenerate them.</p>
+  </li>
+  <li>
+    <p>The <code>output</code> directory contains simuation output, processed
+datasets, logs, or other processed things.</p>
+  </li>
+</ul>
+
+<p>In this set up, I usually have the R script files that <em>do</em> things in
+the project root:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">proj/
+</span><span class="line">├── R/
+</span><span class="line">├── data/
+</span><span class="line">├── doc/
+</span><span class="line">├── figs/
+</span><span class="line">├── output/
+</span><span class="line">└── analysis.R</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>For very simple projects, you might drop the R directory, perhaps
+replacing it with a single file <code>analysis-functions.R</code> which you
+source.</p>
+
+<p>The top of the analysis file usually looks something like</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class="r"><span class="line">library<span class="p">(</span>some_package<span class="p">)</span>
+</span><span class="line">library<span class="p">(</span>some_other_package<span class="p">)</span>
+</span><span class="line">source<span class="p">(</span><span class="s">&quot;R/functions.R&quot;</span><span class="p">)</span>
+</span><span class="line">source<span class="p">(</span><span class="s">&quot;R/utilities.R&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>…followed by the code that loads the data, cleans it up, runs the
+analysis and generates the figures.</p>
+
+<p>Other people have other ideas</p>
+
+<ul>
+  <li>
+    <p><a href="http://www.carlboettiger.info/2012/05/06/research-workflow.html">Carl Boettiger</a>
+is an open science advocate who has described his
+<a href="http://www.carlboettiger.info/2012/05/06/research-workflow.html">layout in detail</a>.
+This layout uses R packages for most of the code organisation, and
+would be a nice approach for large projects.</p>
+  </li>
+  <li>
+    <p><a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1000424">This article</a>
+in <a href="http://www.ploscompbiol.org/">PLOS Computational Biology</a>
+describes a general framework. </p>
+  </li>
+</ul>
+
+<h2 id="treat-data-as-read-only">Treat data as read only</h2>
+
+<p>In my mind, this is probably the most important goal of setting up a
+project.  Data are typically time consuming and/or expensive to
+collect.  Working with them interactively (e.g., in Excel) where they
+can be modified means you are never sure of where the data came from,
+or how they have been modified.  My suggestion is to put your data
+into the <code>data</code> directory and treat it as <em>read only</em>.  Within your
+scripts you might generate derived data sets either temporarily (in an
+R session only) or semi-permanantly (as an file in <code>output/</code>), but the
+original data is always left in an untouched state.</p>
+
+<h2 id="treat-generated-output-as-disposable">Treat generated output as disposable</h2>
+
+<p>In this approach, files in directories <code>figs/</code> and <code>output/</code> are all
+generated by the scripts.  A nice thing about this approach is that if
+the filenames of generated files change (e.g, changing from
+<code>phylogeny.pdf</code> to <code>mammal-phylogeny.pdf</code>) files with the old names
+may still stick around, but because they’re in this directory you know
+you can always delete them.  Before submitting a paper, I will go
+through and delete all the generated files and rerun the analysis to
+make sure that I can create all the analyses and figures from the
+data.</p>
+
+<h2 id="separate-function-definition-and-application">Separate function definition and application</h2>
+
+<p>When your project is new and shiny, the script file usually contains
+many lines of directly executated code.  As it matures, reusable
+chunks get pulled into their own functions.  The actual analysis
+scripts then become relatively short, and use the functions defined in
+scripts in <code>R</code>.  Those scripts do nothing but define functions so that
+they can always be <code>source()</code>‘d by the analysis scripts.</p>
+
+<h1 id="setting-up-a-project-in-rstudio">Setting up a project in RStudio</h1>
+
+<p>This gets rid of the #1 problem with most people’s projects face;
+where do you find the data.  Two solutions people generally come up
+with are:</p>
+
+<ol>
+  <li>Hard code the full filename for each file you load (e.g.,
+<code>/Users/rich/Documents/Projects/Thesis/chapter2/data/mydata.csv</code>)</li>
+  <li>Set the working directory at the beginning of your script file
+<code>/Users/rich/Documents/Projects/Thesis/chapter2</code> then doing
+<code>read.csv("data/mydata.csv")</code></li>
+</ol>
+
+<p>The second of these is probably preferable to the first, because the
+“special case” part is restricted to just one line in your file.
+However, the project is still now quite fragile, because moving it
+from one place to another, you must change this file.  Some examples
+of when you might do this:</p>
+
+<ul>
+  <li>Archiving a project (moving it from a “current projects” directory
+to a new projects directory)</li>
+  <li>Giving the code to somebody else (your labmate, collaborator, supervisor)</li>
+  <li>Uploading the code with your manuscript submission for review, or to
+<a href="http://datadryad.org/">Dryad</a> after acceptance.</li>
+  <li>New computer and new directory layout (especially changing
+platforms, or if your previous mess got too bad and you wanted to
+clean up).</li>
+  <li>Any number of new reasons</li>
+</ul>
+
+<p>The second case hints at a solution too; if we can start R in a
+particular directory then we can just use paths <em>relative to the
+project root</em> and have everything work nicely.</p>
+
+<p>To create a project in R studio:</p>
+
+<ul>
+  <li>“Project”: “Create Project…”</li>
+  <li>choose “New Project, (start a project in a new directory)”.</li>
+  <li>Leave the “Type” as the default.</li>
+  <li>In the “Directory name” type the name for the project.  This might
+be <code>chapter2</code> for a thesis, or something more descriptive like
+<code>fish_behaviour</code>.</li>
+  <li>In the “Create project as a subdirectory of” field select (type or
+browse) for the parent directory of the project.  By default this
+is probably your home directory, but you might prefer your
+Documents folder (I have mine in <code>~/Documents/Projects</code>).</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Plans for 'Nice R code module', Macquarie University 2013]]></title>
@@ -39,9 +440,14 @@ first, as this will cross over into all computing work people do.</p>
 session, run with participants from the February software carpentry
 bootcamp.</li>
   <li>Coding style (7 May)</li>
-  <li>Testing code (21 May)</li>
-  <li>Abstraction and design (4 June)</li>
+  <li>Abstraction and design (21 May)</li>
+  <li>Testing code (4 June)</li>
 </ol>
+
+<p>Except for the version control session, we will meet from 2-3pm in E8C
+212.</p>
+
+<!-- more -->
 
 <p>These sessions follow very much the same ideas as
 <a href="http://www.software-carpentry.org">software carpentry</a>.  Where we
@@ -61,6 +467,10 @@ include</p>
   <li>Code reuse and packaging</li>
   <li>Code profiling and optimisation</li>
   <li>Using and creating simple databases</li>
+  <li>Text processing</li>
+  <li>Numerical optimisation and algorithms</li>
+  <li>Simulation models (an intro only!)</li>
+  <li>Packages</li>
 </ul>
 
 <p>Along with the skills, we will be doing code review.  The idea will be
@@ -74,28 +484,14 @@ solutions.</p>
   
   <entry>
     <title type="html"><![CDATA[R in ecology and evolution]]></title>
-    <link href="http://nicercode.github.com/blog/2013-02-12-test-post/"/>
+    <link href="http://nicercode.github.com/blog/2013-02-12-r-ecology-evolution/"/>
     <updated>2013-02-12T17:57:00+11:00</updated>
-    <id>http://nicercode.github.com/blog/test-post</id>
+    <id>http://nicercode.github.com/blog/r-ecology-evolution</id>
     <content type="html"><![CDATA[<p>On this blog, we (Daniel Falster and I) are hoping to record bits of
 information about using R for ecology and evolution.  Communicating
 tips person-to-person is too inefficient, and recently helping out at
-a <a href="http://software-carpentry.org">software carpentry</a> boot camp has
-got me interested in broadcasting ideas more widely.</p>
-
-<p>Test code:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class="r"><span class="line">f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span>
-</span><span class="line">  sin<span class="p">(</span>x<span class="p">)</span>
-</span><span class="line"><span class="kr">for</span> <span class="p">(</span> i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span> <span class="p">)</span>
-</span><span class="line">  print<span class="p">(</span>i<span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>More test for checking the layout.</p>
+a <a href="http://software-carpentry.org">software carpentry</a> boot camp made
+us interested in broadcasting ideas more widely.</p>
 ]]></content>
   </entry>
   
