@@ -153,7 +153,7 @@ to a series of objects (eg. vectors, matrices, dataframes or files). They includ
 Each repeats a function or operation on a series of elements, but they
 differ in the data types they accept and return. What they all in
 common is that **order of iteration is not important**.  This is
-crucial. If each each iteration is independent, then you can cycle
+crucial. If each iteration is independent, then you can cycle
 through them in whatever order you like. Generally, we argue that you
 should only use the generic looping functions `for`, `while`, and
 `repeat` when the order or operations **is** important. Otherwise
